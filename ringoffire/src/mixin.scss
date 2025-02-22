@@ -1,0 +1,11 @@
+@mixin dFlex($d: flex, $jc: center, $ai: center, $fd: none) {
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+@mixin divSize($w: 100vw, $h: 100vh) {
+    width: $w;
+    height: $h;
+}

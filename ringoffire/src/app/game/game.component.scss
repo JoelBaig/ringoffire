@@ -1,6 +1,8 @@
+@import './../../mixin.scss';
+
 .field {
-    width: 100vw;
-    height: 100vh;
+    @include dFlex();
+    @include divSize();
     max-width: 100%;
     background-image: url('/assets/img/game/board.jpg');
 }

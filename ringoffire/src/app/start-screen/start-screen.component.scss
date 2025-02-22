@@ -1,11 +1,10 @@
+@import './../../mixin.scss';
+
 .start-screen {
     background-color: black;
-    width: 100vw;
-    height: 100vh;
     max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include divSize();
+    @include dFlex();
 
     >img {
         width: 100vh;
@@ -17,8 +16,7 @@
     left: 0;
     right: 0;
     bottom: 150px;
-    display: flex;
-    justify-content: center;
+    @include dFlex($ai: none);
 
     >img {
         width: 400px;
