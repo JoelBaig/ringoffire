@@ -2,7 +2,16 @@
 
 .field {
     @include dFlex();
-    @include divSize();
+    @include elementSize();
     max-width: 100%;
     background-image: url('/assets/img/game/board.jpg');
+
+    >div {
+        position: relative;
+
+        >img {
+            @include elementSize($w: 100px, $h: 130px);
+            position: absolute;
+        }
+    }
 }

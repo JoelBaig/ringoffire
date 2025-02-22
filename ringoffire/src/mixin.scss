@@ -5,7 +5,7 @@
     flex-direction: $fd;
 }
 
-@mixin divSize($w: 100vw, $h: 100vh) {
+@mixin elementSize($w: 100vw, $h: 100vh) {
     width: $w;
     height: $h;
 }

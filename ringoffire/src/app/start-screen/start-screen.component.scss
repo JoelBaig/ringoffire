@@ -3,7 +3,7 @@
 .start-screen {
     background-color: black;
     max-width: 100%;
-    @include divSize();
+    @include elementSize();
     @include dFlex();
 
     >img {
