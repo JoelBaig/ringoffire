@@ -30,12 +30,14 @@ export class GameComponent implements OnInit {
   }
 
   takeCard() {
-    if (this.game.stack.length > 0) {
+    if (this.game.stack.length > 0 && !this.pickCardAnimation) {
       this.currentCard = this.game.stack.pop() ?? 'card_cover';
       console.log(this.currentCard);
       this.pickCardAnimation = true;
-    } else {
-      console.warn("Keine Karten mehr im Stapel!");
+
+      setTimeout(() => {
+        this.pickCardAnimation = false;
+      }, 1500);
     }
   }
 }
