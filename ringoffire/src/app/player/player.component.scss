@@ -3,8 +3,16 @@
 .player {
     @include dFlex($jc: none);
     @include elementSize($w: 100px, $h: 100px);
-    font-size: 18px;
+    background-color: orange;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 300px;
 
+    >span {
+        font-size: 32px;
+        margin-left: 16px;
+        color: white;
+    }
 
     >img {
         width: 100px;
