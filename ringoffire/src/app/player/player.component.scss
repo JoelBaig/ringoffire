@@ -1,0 +1,15 @@
+@import './../../mixin.scss';
+
+.player {
+    @include dFlex($jc: none);
+    @include elementSize($w: 100px, $h: 100px);
+    font-size: 18px;
+
+
+    >img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+}
