@@ -2,8 +2,7 @@
 
 .player {
     @include dFlex($jc: none);
-    @include elementSize($w: 100px, $h: 100px);
-    background-color: orange;
+    background-color: rgb(50,50,50, 0.7);
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     width: 250px;
@@ -15,9 +14,12 @@
     }
 
     >img {
-        width: 100px;
-        height: 100px;
+        @include elementSize($w: 70px, $h: 70px);
         object-fit: cover;
         border-radius: 100%;
     }
+}
+
+.player-active {
+    background-color: orange !important;
 }
