@@ -1,32 +1,43 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { Game } from '../../models/game';
-import { NgIf, NgFor, NgStyle } from '@angular/common';
+import { NgIf, NgFor, NgStyle, CommonModule } from '@angular/common';
 import { PlayerComponent } from '../player/player.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDialog ,MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, NgIf, NgFor, NgStyle, PlayerComponent, MatButtonModule, MatIconModule, MatDialogModule],
+  imports: [
+    CommonModule,
+    NgIf,
+    NgFor,
+    NgStyle,
+    PlayerComponent,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatInputModule,
+    FormsModule
+  ],
   templateUrl: './game.component.html',
-  styleUrl: './game.component.scss'
+  styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
   pickCardAnimation = false;
   currentCard: string = '';
-  game: Game = new Game;
+  game: Game = new Game();
 
   @Input() card = {
     image: './assets/img/cards/card_cover.png',
     name: 'Card Name'
-  }
+  };
 
-  constructor(private dialog: MatDialog) {
-
-  }
+  private dialog = inject(MatDialog);
 
   ngOnInit(): void {
     this.newGame();
@@ -54,8 +65,8 @@ export class GameComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed', result);
-    });
+    dialogRef.afterClosed().subscribe((name: string) => {
+      this.game.players.push(name);
+    })
   }
 }
