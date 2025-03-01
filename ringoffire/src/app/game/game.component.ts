@@ -3,11 +3,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Game } from '../../models/game';
 import { NgIf, NgFor, NgStyle } from '@angular/common';
 import { PlayerComponent } from '../player/player.component';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, NgIf, NgFor, NgStyle, PlayerComponent],
+  imports: [CommonModule, NgIf, NgFor, NgStyle, PlayerComponent, MatButtonModule, MatIconModule],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })
@@ -42,5 +43,9 @@ export class GameComponent implements OnInit {
         this.pickCardAnimation = false;
       }, 1000);
     }
+  }
+
+  openDialog(){
+
   }
 }
