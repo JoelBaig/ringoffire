@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,13 +21,17 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './dialog-add-player.component.html',
   styleUrls: ['./dialog-add-player.component.scss']
 })
-export class DialogAddPlayerComponent {
+export class DialogAddPlayerComponent implements OnInit{
   name: string = '';
 
   constructor(
     public dialogRef: MatDialogRef<DialogAddPlayerComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
+
+  ngOnInit(): void {
+      
+  }
 
   onNoClick(): void {
     this.dialogRef.close();
