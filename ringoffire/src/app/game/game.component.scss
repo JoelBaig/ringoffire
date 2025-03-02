@@ -4,7 +4,7 @@
     @include dFlex();
     @include elementSize();
     max-width: 100%;
-    background-image: url('/assets/img/game/board.jpg');
+    background-image: url('./../../assets/img/game/board.jpg');
 
     >div {
         position: relative;
