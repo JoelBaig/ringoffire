@@ -23,7 +23,7 @@ import { GameInfoComponent } from '../game-info/game-info.component';
     MatDialogModule,
     MatInputModule,
     FormsModule,
-    GameInfoComponent
+    GameInfoComponent,
   ],
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
