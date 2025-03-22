@@ -1,8 +1,9 @@
 export const firebaseConfig = {
-    apiKey: "DEINE_API_KEY",
-    authDomain: "DEIN_PROJEKT.firebaseapp.com",
-    projectId: "DEIN_PROJEKT_ID",
-    storageBucket: "DEIN_PROJEKT.appspot.com",
-    messagingSenderId: "DEIN_MESSAGING_SENDER_ID",
-    appId: "DEIN_APP_ID"
+    apiKey: "AIzaSyDt7PtBrYVOrISoXF2OfFa-ud3AuDD56nk",
+    authDomain: "ringoffire-29fc9.firebaseapp.com",
+    projectId: "ringoffire-29fc9",
+    storageBucket: "ringoffire-29fc9.firebasestorage.app",
+    messagingSenderId: "666930260994",
+    appId: "1:666930260994:web:67cadd2328762ba0e14b1b",
+    measurementId: "G-LF86M9PYPD"
   };
